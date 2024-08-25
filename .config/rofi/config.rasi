@@ -1,0 +1,9 @@
+@theme "/usr/share/rofi/themes/gruvbox-common.rasi"
+configuration {
+    display-drun: "Applications:";
+    display-windows: "Windows:";
+    drun-display-format: "{icon} {name}";
+    modi: "window,run,drun";
+    show-icons: true;
+    icon-theme: "Papirus";
+}
