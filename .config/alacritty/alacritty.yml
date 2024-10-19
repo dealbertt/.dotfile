@@ -8,7 +8,6 @@ window.opacity : 0.5
 
 cursor:
   style:
-    shape: Underline
     blinking: Always
     blink-interval: 750
 

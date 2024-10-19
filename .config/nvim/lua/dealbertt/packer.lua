@@ -3,7 +3,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use 'AlexvZyl/nordic.nvim'
+ -- use 'AlexvZyl/nordic.nvim'
+  use 'rose-pine/neovim'
   use 'windwp/nvim-autopairs'
   use {
       'nvim-lualine/lualine.nvim',

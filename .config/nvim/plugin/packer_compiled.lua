@@ -129,10 +129,10 @@ _G.packer_plugins = {
     path = "/home/dealbertt/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nordic.nvim"] = {
+  neovim = {
     loaded = true,
-    path = "/home/dealbertt/.local/share/nvim/site/pack/packer/start/nordic.nvim",
-    url = "https://github.com/AlexvZyl/nordic.nvim"
+    path = "/home/dealbertt/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
   },
   ["nvim-autopairs"] = {
     loaded = true,

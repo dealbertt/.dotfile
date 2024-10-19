@@ -1,4 +1,4 @@
-@theme "/usr/share/rofi/themes/gruvbox-common.rasi"
+
 configuration {
     display-drun: "Applications:";
     display-windows: "Windows:";
