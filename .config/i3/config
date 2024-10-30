@@ -21,12 +21,14 @@ font pango:FiraCode Nerd Font 10
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec_always --no-startup-id killall polybar
-exec_always --no-startup-id picom
 exec_always --no-startup-id sudo tlp ac
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id feh --bg-scale ~/Documents/bg/wec.jpeg
+exec --no-startup-id feh --bg-scale ~/Documents/bg/wec2.jpg
+exec_always xrandr
+exec_always picom
+exec_always --no-startup-id xrandr --output DP-4 --mode 1920x1080 --rate 144
+exec_always --no-startup-id xrandr --output HDMI-0 --left-of DP-4
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -37,8 +39,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-default_border none
-default_floating_border none
+default_border normal
+default_floating_border normal
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym $mod+F2 exec --no-startup-id amixer set Master 5%+
@@ -58,9 +60,11 @@ bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym Mod4 + l exec wlogout
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show drun
+#bindsym $mod+d exec --no-startup-id dmenu
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -159,8 +163,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-gaps inner 10
-gaps outer 10
+gaps inner 0
+gaps outer 0
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
@@ -192,6 +196,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+bar {
+        status_command i3status
+        position top
+}

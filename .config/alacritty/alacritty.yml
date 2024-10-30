@@ -1,10 +1,9 @@
-
 font:
   normal:
-    family: FiraCode Nerd FontMono
+    family: MartianMono Nerd Font
     style: Regular
   size: 14
-window.opacity : 0.5
+window.opacity : 0.9
 
 cursor:
   style:
@@ -13,6 +12,13 @@ cursor:
 
 shell:
   program: /usr/bin/zsh
+
+
+colors:
+  primary:
+    background: '0x000000'
+    foreground: '0xD3D3D3'
+# custom fonts are installed in /usr/local/share/fonts/ 
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
@@ -84,8 +90,7 @@ shell:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 1.0
-
+  #opacity: 0.5
   # Startup Mode (changes require restart)
   #
   # Values for `startup_mode`:

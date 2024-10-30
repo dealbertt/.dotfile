@@ -1,9 +1,13 @@
 
 configuration {
-    display-drun: "Applications:";
-    display-windows: "Windows:";
+    display-drun: "Apps";
+    display-windows: "Windows";
     drun-display-format: "{icon} {name}";
     modi: "window,run,drun";
     show-icons: true;
     icon-theme: "Papirus";
+    font: "FiraCode 14";
+    background: #808080; /* Gray background */
 }
+
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
