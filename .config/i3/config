@@ -21,17 +21,16 @@ font pango:FiraCode Nerd Font 10
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec_always --no-startup-id sudo tlp ac
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id feh --bg-scale ~/Documents/bg/bg2.jpg
-exec_always --no-startup-id killall polybar
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec_always picom
-exec xrandr --output DP-4 --primary
-exec  xrandr --output DP-4 --mode 1920x1080 --rate 144
-exec  xrandr --output HDMI-0 --left-of DP-4
+exec_always xrandr
+exec_always xrandr --output DP-4 --primary
+exec_always  xrandr --output DP-4 --mode 1920x1080 --rate 144
+exec_always  xrandr --output HDMI-0 --left-of DP-4
 
+exec --no-startup-id feh --bg-scale ~/Documents/bg/bg2.jpg
+exec --no-startup-id ~/.config/polybar/launch_polybar.sh
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
+
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
@@ -41,17 +40,29 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 4
+default_floating_border pixel 4
+workspace 1 output DP-4
+workspace 2 output HDMI-0
 
-new_window pixel 1
-client.focused          #ffffff #ffffff #ffffff
-client.unfocused        #ffffff #ffffff #ffffff
-client.focused_inactive #ffffff #ffffff #ffffff
+#GAPS
+gaps inner 15
+gaps outer 15
+smart_gaps on
+for_window [class=".*"] border pixel 4
 
-client.background #ffffff
-gaps inner 10
-gaps outer 10
+#BORDER
+set $bgcolor    #ffffff
+set $in-bgcolor #363636
+set $text       #ffffff
+set $u-bgcolor  #ff0000
+set $indicator  #a8a3c1
+set $in-text    #969696
+#                       border          background      text            indicator (a line which shows where the next window will be placed)     
+client.focused          $bgcolor        $bgcolor        $text           $indicator
+client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
+client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
+client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -65,7 +76,6 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec alacritty

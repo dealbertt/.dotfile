@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   use 'rose-pine/neovim'
   use 'windwp/nvim-autopairs'
   use {
+
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
