@@ -32,5 +32,5 @@ use({'hrsh7th/cmp-path'})
 use({'saadparwaiz1/cmp_luasnip'})
 use({'L3MON4D3/LuaSnip'})
 use({'rafamadriz/friendly-snippets'})
+use({'lewis6991/gitsigns.nvim'})
 end)
-
