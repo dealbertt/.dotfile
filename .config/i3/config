@@ -28,7 +28,7 @@ exec_always  xrandr --output DP-4 --mode 1920x1080 --rate 144
 exec_always  xrandr --output HDMI-0 --left-of DP-4
 
 exec --no-startup-id feh --bg-scale ~/Documents/bg/bg2.jpg
-exec --no-startup-id ~/.config/polybar/launch_polybar.sh
+#exec --no-startup-id ~/.config/polybar/launch_polybar.sh
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 
 # they are included here as an example. Modify as you see fit.
@@ -222,4 +222,10 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+bar {
+    status_command i3status  # or i3blocks, py3status
+    position top          # Can be 'top' or 'bottom'
+    font pango:FiraCode Nerd Font 9
+}
+
 
