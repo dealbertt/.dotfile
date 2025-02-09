@@ -24,11 +24,11 @@ font pango:FiraCode Nerd Font 10
 exec --no-startup-id dex --autostart --environment i3
 exec_always xrandr
 exec_always xrandr --output DP-4 --primary
-exec_always  xrandr --output DP-4 --mode 1920x1080 --rate 144
-exec_always  xrandr --output HDMI-0 --left-of DP-4
+exec_always xrandr --output DP-4 --mode 1920x1080 --rate 144
+exec_always xrandr --output HDMI-0 --left-of DP-4
 
 exec --no-startup-id feh --bg-scale ~/Documents/bg/bg2.jpg
-#exec --no-startup-id ~/.config/polybar/launch_polybar.sh
+exec --no-startup-id ~/.config/polybar/launch_polybar.sh
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 
 # they are included here as an example. Modify as you see fit.
@@ -40,16 +40,14 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-default_border pixel 4
-default_floating_border pixel 4
 workspace 1 output DP-4
 workspace 2 output HDMI-0
 
 #GAPS
-gaps inner 15
-gaps outer 15
-smart_gaps on
-for_window [class=".*"] border pixel 4
+gaps top 5
+gaps inner 5
+gaps outer 5
+for_window [class=".*"] border pixel 3
 
 #BORDER
 set $bgcolor    #ffffff
@@ -143,8 +141,6 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
-new_window none
-new_float none
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -188,8 +184,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-gaps inner 0
-gaps outer 0
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
@@ -222,10 +216,11 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3status  # or i3blocks, py3status
-    position top          # Can be 'top' or 'bottom'
-    font pango:FiraCode Nerd Font 9
-}
+
+#bar {
+#    status_command i3status  # or i3blocks, py3status
+#    position top          # Can be 'top' or 'bottom'
+#    font pango:FiraCode Nerd Font 9
+#}
 
 
