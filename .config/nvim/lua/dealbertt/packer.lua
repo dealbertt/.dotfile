@@ -16,6 +16,14 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
+  require("packer").startup(function()
+      use({
+          "stevearc/oil.nvim",
+          config = function()
+              require("oil").setup()
+          end,
+      })
+  end)
 
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use ('theprimeagen/harpoon')
