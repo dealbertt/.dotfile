@@ -5,3 +5,5 @@ This config is shared across multiple devices, so if there is any difference bet
 that device will be created
 
 main branch: home pc
+
+Important! in home pc, neovim has been installed throuhg snap and not apt due to trouble with versions :)
