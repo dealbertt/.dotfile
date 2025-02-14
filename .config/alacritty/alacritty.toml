@@ -1,0 +1,15 @@
+
+[colors.primary]
+background = "0x000000"
+foreground = "0xD3D3D3"
+
+[font]
+size = 12
+[font.normal]
+family = "Martian Mono Nerd Font"
+style = "Regular"
+
+[terminal]
+
+[terminal.shell]
+program = "/usr/bin/zsh"
