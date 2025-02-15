@@ -1,7 +1,7 @@
 @import "macchiato.css";
 
 * {
-  font-family: "MartianMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "IosevkaTerm Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -34,7 +34,7 @@ button:hover {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: #222222;
+  color: #c4c7cc;
 }
 
 
@@ -71,7 +71,7 @@ button:hover {
 
 #pulseaudio {
   color: @maroon;
-  color: #222222;
+  color: #c4c7cc;
 }
 
 #network {
@@ -80,39 +80,43 @@ button:hover {
 
 #temperature {
   color: @sky;
+  color: #c4c7cc;
 }
 
 #battery {
   color: @green;
-  color: #222222;
+  color: #c4c7cc;
 }
 
 #clock {
   color: @flamingo;
-  color: #222222;
+  color: #c4c7cc;
 }
 
 #cpu{
   color: @flamingo;
-  color: #222222;
+  color: #c4c7cc;
 }
 
 #memory{
   color: @flamingo;
-  color: #222222;
+  color: #c4c7cc;
 }
 
 
 #window {
   color: @rosewater;
-  color: #222222;
+  color: #c4c7cc;
 }
 
 .modules-right,
 .modules-left,
 .modules-center {
-  background-color: rgba(200,200,200,50);
-  border-radius: 15px;
+  background-color: @base;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffffff;
 }
 
 .modules-right {
