@@ -34,7 +34,7 @@ button:hover {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: #ffffff;
+  color: #222222;
 }
 
 
@@ -44,7 +44,7 @@ button:hover {
 
 #workspaces button.focused {
   background-color: @lavender;
-  box-shadow: inset 0 -3px #ffffff;
+  /*box-shadow: inset 0 -3px #ffffff;*/
 }
 
 #workspaces button.urgent {
@@ -52,7 +52,6 @@ button:hover {
 }
 
 #mode {
-  background-color: #64727D;
   box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -64,10 +63,12 @@ button:hover {
 #network,
 #pulseaudio {
   padding: 0 10px;
+  margin-left: 10px;
 }
 
 #pulseaudio {
   color: @maroon;
+  color: #222222;
 }
 
 #network {
@@ -80,20 +81,34 @@ button:hover {
 
 #battery {
   color: @green;
+  color: #222222;
 }
 
 #clock {
   color: @flamingo;
+  color: #222222;
 }
+
+#cpu{
+  color: @flamingo;
+  color: #222222;
+}
+
+#memory{
+  color: @flamingo;
+  color: #222222;
+}
+
 
 #window {
   color: @rosewater;
+  color: #222222;
 }
 
 .modules-right,
 .modules-left,
 .modules-center {
-  background-color: @base;
+  background-color: rgba(200,200,200,50);
   border-radius: 15px;
 }
 
@@ -139,6 +154,6 @@ label:focus {
   color: @text;
 }
 /* Apply margin to all modules */
-#workspaces, #clock, #network, #battery, #pulseaudio {
+#workspaces, #clock, #network, #battery, #pulseaudio, #cpu, #memory {
     margin: 0 10px;  /* Adjust as needed */
 }

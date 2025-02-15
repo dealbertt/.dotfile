@@ -2,47 +2,46 @@
   "margin-top" : 5,
     "margin-left": 10,
     "margin-right": 10,
+    "spacing": 4,
     "height" : 30,
     "modules-left": [
       "hyprland/workspaces",
       "hyprland/window"
     ],
     "modules-center": [
-      "clock",
+      "clock"
     ],
     "modules-right": [
     "pulseaudio",
+    "cpu",
+    "memory"
     ],
     "hyprland/window": {
-      "format": "{}",
+      "format": "|{}|",
+      "format-empty": "Hyprland",
       "max-length": 35,
       "rewrite": {
         "": "Harsh"
       },
-      "separate-outputs": true,
+      "separate-outputs": true
     },
     "hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": " ",
+        "active": "_"
       },
-      "sort-by-number": true,
-      "persistent-workspaces": {
-        "*": 4, // 5 workspaces by default on every monitor
-        "HDMI-A-1": 3 // but only three on HDMI-A-1
-      },
+      "sort-by-number": true
     },
     "clock": {
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-      "format": "  {usage}%",
-      "tooltip": false
+      "format": " {usage}%"
     },
     "memory": {
-      "format": "{}%  "
+      "format": " {used}% "
     },
     "temperature": {
       "critical-threshold": 80,
