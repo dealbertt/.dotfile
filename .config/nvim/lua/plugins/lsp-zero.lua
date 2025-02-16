@@ -10,12 +10,15 @@ return{
     'L3MON4D3/LuaSnip',
     'rafamadriz/friendly-snippets',
     config = function()
-        vim.api.nvim_create_autocmd('LspAttach', {
-            group = vim.api.nvim_create_augroup('user_lsp_attach', {clear = true}),
+        local lspconfig_defaults = require('lspconfig').util.default_config
+        lspconfig_defaults.capabilities = vim.tbl_deep_extend(
+        'force',
+        lspconfig_defaults.capabilities,
+        require('cmp_nvim_lsp').default_capabilities()
+        )
+        vim.api.nvim_create_autocmd('LspAttach', { group = vim.api.nvim_create_augroup('user_lsp_attach', {clear = true}),
             callback = function(event)
                 local opts = {buffer = event.buf}
-
-
                 vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
                 vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
                 vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
@@ -32,6 +35,7 @@ return{
         require('mason').setup({})
         require('mason-lspconfig').setup({
             ensure_installed = { 'rust_analyzer','clangd','lua_ls','zls'},
+            automatic_installation = true,
             handlers = {
                 function(server_name)
                     require('lspconfig')[server_name].setup({
