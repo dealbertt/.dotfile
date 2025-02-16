@@ -48,7 +48,7 @@ button:hover {
 }
 #workspaces button.active {
     color: #ffffff; /* Bright white text */
-    border-bottom: 3px solid #000000; /* White bottom border */
+    border-bottom: 1px solid #ffffff; /* White bottom border */
 }
 #workspaces button.urgent {
   background-color: #eb4d4b;
@@ -66,7 +66,7 @@ button:hover {
 #network,
 #pulseaudio {
   padding: 0 10px;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 #pulseaudio {
@@ -120,11 +120,13 @@ button:hover {
 }
 
 .modules-right {
-  padding: 0 10px;
+  padding: 0 0px;
 }
 
 .modules-left {
-  padding: 0 20px;
+  padding: 0 0px;
+  padding-left: 2px;
+  padding-right: 5px;
 }
 
 .modules-center {
@@ -162,5 +164,5 @@ label:focus {
 }
 /* Apply margin to all modules */
 #workspaces, #clock, #network, #battery, #pulseaudio, #cpu, #memory {
-    margin: 0 10px;  /* Adjust as needed */
+    margin: 2px 10px;  /* Adjust as needed */
 }

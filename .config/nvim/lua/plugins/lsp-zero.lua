@@ -1,22 +1,22 @@
 return{
     'VonHeikemen/lsp-zero.nvim',
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'saadparwaiz1/cmp_luasnip',
-    'L3MON4D3/LuaSnip',
-    'rafamadriz/friendly-snippets',
-    config = function()
-        local lspconfig_defaults = require('lspconfig').util.default_config
-        lspconfig_defaults.capabilities = vim.tbl_deep_extend(
-        'force',
-        lspconfig_defaults.capabilities,
-        require('cmp_nvim_lsp').default_capabilities()
-        )
-        vim.api.nvim_create_autocmd('LspAttach', { group = vim.api.nvim_create_augroup('user_lsp_attach', {clear = true}),
+    dependencies = {
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'saadparwaiz1/cmp_luasnip',
+        'L3MON4D3/LuaSnip',
+        'rafamadriz/friendly-snippets',
+    },
+        config = function()
+
+            local lspconfig_defaults = require('lspconfig').util.default_config
+            lspconfig_defaults.capabilities = vim.tbl_deep_extend('force',
+            lspconfig_defaults.capabilities,
+            require('cmp_nvim_lsp').default_capabilities()
+            )
+            vim.api.nvim_create_autocmd('LspAttach', { group = vim.api.nvim_create_augroup('user_lsp_attach', {clear = true}),
             callback = function(event)
                 local opts = {buffer = event.buf}
                 vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
@@ -31,40 +31,6 @@ return{
         })
 
         local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-        require('mason').setup({})
-        require('mason-lspconfig').setup({
-            ensure_installed = { 'rust_analyzer','clangd','lua_ls','zls'},
-            automatic_installation = true,
-            handlers = {
-                function(server_name)
-                    require('lspconfig')[server_name].setup({
-                        capabilities = lsp_capabilities,
-                    })
-                end,
-                lua_ls = function()
-                    require('lspconfig').lua_ls.setup({
-                        capabilities = lsp_capabilities,
-                        settings = {
-                            Lua = {
-                                runtime = {
-                                    version = 'LuaJIT'
-                                },
-                                diagnostics = {
-                                    globals = {'vim'},
-                                },
-                                workspace = {
-                                    library = {
-                                        vim.env.VIMRUNTIME,
-                                    }
-                                }
-                            }
-                        }
-                    })
-                end,
-            }
-        })
-
         local cmp = require('cmp')
         local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
