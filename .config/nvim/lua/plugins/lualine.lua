@@ -19,6 +19,9 @@ return {
         lualine_y = {'progress'},
         lualine_z = {'location'}
       },
+      refresh = {
+        statusline = 100;
+      },
     }
   end,
 }
