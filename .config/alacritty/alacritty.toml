@@ -5,8 +5,9 @@ foreground = "0xD3D3D3"
 
 [font]
 size = 16
+
 [font.normal]
-family = "InconsolataGo Nerd Font"
+family = "ZedMono Nerd Font"
 style = "Regular"
 
 [terminal]
