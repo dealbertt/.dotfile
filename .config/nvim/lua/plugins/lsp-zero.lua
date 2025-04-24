@@ -9,6 +9,7 @@ return{
         'L3MON4D3/LuaSnip',
         'rafamadriz/friendly-snippets',
     },
+
         config = function()
 
             local lspconfig_defaults = require('lspconfig').util.default_config
@@ -58,4 +59,12 @@ return{
             },
         })
     end,
+    vim.diagnostic.config({
+        virtual_text = true,
+        signs = true,
+        update_in_insert = false,
+        underline = true,
+        severity_sort = false,
+        float = true,
+    })
 }
