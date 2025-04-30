@@ -5,7 +5,7 @@ return {
             --- @usage 'auto'|'main'|'moon'|'dawn'
             variant = 'moon',
             --- @usage 'main'|'moon'|'dawn'
-            dark_variant = 'main',
+            dark_variant = 'moon',
             bold_vert_split = false,
             dim_nc_background = false,
             disable_background = false,
