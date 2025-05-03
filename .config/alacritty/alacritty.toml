@@ -4,7 +4,7 @@ background = "0x000000"
 foreground = "0xD3D3D3"
 
 [font]
-size = 14
+size = 12
 
 [font.normal]
 family = "FiraMono Nerd Font"
@@ -16,4 +16,4 @@ style = "Regular"
 program = "/usr/bin/zsh"
 
 [window]
-opacity = 0.7
+opacity = 0.5
