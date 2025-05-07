@@ -1,1 +1,6 @@
+# Style
 background-opacity = 0.6
+shell-integration-features = no-cursor
+cursor-style = block
+
+# Performance
