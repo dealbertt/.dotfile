@@ -7,7 +7,7 @@ foreground = "0xD3D3D3"
 size = 12
 
 [font.normal]
-family = "FiraMono Nerd Font"
+family = "CaskaydiaCove Nerd Font"
 style = "Regular"
 
 [terminal]
