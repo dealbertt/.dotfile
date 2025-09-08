@@ -8,3 +8,6 @@ that device will be created
 Important! in home pc, neovim has been installed throuhg snap and not apt due to trouble with versions :)  
 
 Current setup: Fedora 42 (KDE Plasma) with hyprland  
+Font: Adwaita Nerd Font  
+Terminal: Alacritty    
+WM: Hyprland
