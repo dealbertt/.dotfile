@@ -1,10 +1,15 @@
-
 [colors.primary]
 background = "0x000000"
 foreground = "0xD3D3D3"
 
 [font]
 size = 24 
+
+[cursor.style]
+blinking = "Always"
+
+[cursor]
+blink_interval = 500
 
 [font.normal]
 family = "FiraMono Nerd Font"
