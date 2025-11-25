@@ -1,20 +1,21 @@
 {
     "position": "bottom",
+    "margin-top" : 5,
+    "margin-left": 10,
+    "margin-right": 10,
     "spacing": 4,
     "height" : 30,
     "modules-left": [
-        "custom/logo",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
         "pulseaudio",
         "cpu",
-        "memory",
-        "clock"
-
+        "memory"
     ],
     "hyprland/window": {
         "format": "|{}|",
@@ -32,7 +33,7 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%H:%M}",
+        "format": "{:%d/%m/%Y - %H:%M:%S}",
         "interval": 1
     },
     "cpu": {
@@ -82,8 +83,5 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/logo": {
-        "format": "  Start",
-        "tooltip": false
-    },
+    "style": "IosevkaTerm Nerd Font"
 }
