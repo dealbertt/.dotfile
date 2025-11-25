@@ -12,7 +12,7 @@ blinking = "Always"
 blink_interval = 500
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "LiterationMono Nerd Font"
 style = "Regular"
 
 [terminal]

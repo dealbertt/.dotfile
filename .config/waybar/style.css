@@ -1,6 +1,6 @@
 @import "macchiato.css";
 * {
-  font-family: "LiterationMono Nerd Font", "sans-serif";
+  font-family: "LiterationMono Nerd Font", sans-serif;
   font-size: 16px;
 }
 
@@ -118,7 +118,6 @@ button:hover {
 .modules-right,
 .modules-center {
   background-color: #3a6ea5;
-  padding: 5px;
 }
 
 .modules-right {
@@ -127,8 +126,6 @@ button:hover {
 
 .modules-left {
   padding: 0 0px;
-  padding-left: 2px;
-  padding-right: 5px;
 }
 
 .modules-center {

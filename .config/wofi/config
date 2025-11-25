@@ -1,4 +1,4 @@
 allow_images=true
 style=~/.config/wofi/gruvbox.css
-font=IosevkaTerm Nerd Font, 12
+font=LiterationMono Nerd Font, 12
 

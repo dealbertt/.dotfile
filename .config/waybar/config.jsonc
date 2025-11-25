@@ -11,7 +11,6 @@
     ],
     "modules-right": [
         "pulseaudio",
-        "cpu",
         "memory",
         "clock"
 
@@ -67,7 +66,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} ",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "",
@@ -83,7 +82,8 @@
         "on-click": "pavucontrol"
     },
     "custom/logo": {
-        "format": "  Start",
-        "tooltip": false
+        "format": "󰖳  Start",
+        "tooltip": false,
+        "on-click": "wofi --show drun --style ~/.config/wofi/gruvbox.css"
     },
 }
