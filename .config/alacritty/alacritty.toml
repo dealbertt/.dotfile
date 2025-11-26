@@ -12,7 +12,7 @@ blinking = "Always"
 blink_interval = 500
 
 [font.normal]
-family = "LiterationMono Nerd Font"
+family = "GohuFont 14 Nerd Font"
 style = "Regular"
 
 [terminal]
@@ -21,4 +21,4 @@ style = "Regular"
 program = "/usr/bin/zsh"
 
 [window]
-opacity = 0.8
+opacity = 1 

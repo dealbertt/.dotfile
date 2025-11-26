@@ -1,4 +1,5 @@
 allow_images=true
 style=~/.config/wofi/gruvbox.css
 font=LiterationMono Nerd Font, 12
+normal_window=true
 
