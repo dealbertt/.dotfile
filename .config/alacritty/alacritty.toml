@@ -6,14 +6,13 @@ foreground = "0xD3D3D3"
 size = 24 
 
 [cursor.style]
-shape = "Beam"
 blinking = "Always"
 
 [cursor]
 blink_interval = 500
 
 [font.normal]
-family = "IosevkaTerm Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [terminal]
