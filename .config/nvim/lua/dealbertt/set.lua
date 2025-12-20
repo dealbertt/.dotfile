@@ -1,4 +1,5 @@
-vim.opt.guicursor = ""
+#vim.opt.guicursor = ""
+
 vim.o.relativenumber = true
 vim.o.number = true
 vim.o.fillchars = 'eob: '
