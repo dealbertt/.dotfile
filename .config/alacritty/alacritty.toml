@@ -3,7 +3,7 @@ background = "0x000000"
 foreground = "0xD3D3D3"
 
 [font]
-size = 24 
+size = 20 
 
 [cursor.style]
 blinking = "Always"
@@ -21,4 +21,4 @@ style = "Regular"
 program = "/usr/bin/zsh"
 
 [window]
-opacity = 1 
+opacity = 0.5 

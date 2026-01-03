@@ -6,11 +6,10 @@
 
 window#waybar {
   /*background-color: rgba(0, 0, 0, 0); */
-  background-color: #ffffff;
+  background-color: #173dd4;
   border-radius: 13px;
   transition-property: background-color;
   transition-duration: .5s;
-  color: #000000;
 }
 
 button {
@@ -48,7 +47,7 @@ button:hover {
   /*box-shadow: inset 0 -3px #ffffff;*/
 }
 #workspaces button.active {
-    color: #000000; /* Bright white text */
+    color: #ffffff; /* Bright white text */
     border-bottom: 1px solid #ffffff; /* White bottom border */
 }
 #workspaces button.urgent {
@@ -91,29 +90,34 @@ button:hover {
 
 #clock {
   color: @flamingo;
-  color: #84868a;
+  color: #c4c7cc;
 }
 
 #cpu{
   color: @flamingo;
-  color: #84868a;
+  color: #c4c7cc;
 }
 
 #memory{
   color: @flamingo;
-  color: #84868a;
+  color: #c4c7cc;
 }
 
 
 #window {
   color: @rosewater;
-  color: #84868a;
+  color: #c4c7cc;
 }
 
+#custom-logo {
+    background-color: #2e9623; /* whatever color you want */
+    padding: 0 10px;
+    color: #ffffff;
+}
 
 .modules-right,
 .modules-center {
-  background-color: #ffffff;
+  background-color: #3a6ea5;
 }
 
 .modules-right {
