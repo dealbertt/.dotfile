@@ -21,4 +21,4 @@ style = "Regular"
 program = "/usr/bin/zsh"
 
 [window]
-opacity = 0.5 
+opacity = 0.5
