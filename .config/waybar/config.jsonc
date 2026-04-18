@@ -35,7 +35,8 @@
         "interval": 1
     },
     "cpu": {
-        "format": "  {usage}%"
+        "format": "  {usage}%",
+        "interval": 1
     },
     "memory": {
         "format": "  {used}Gb "

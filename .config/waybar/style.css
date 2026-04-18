@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-  /*background-color: rgba(0, 0, 0, 0); */
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0); 
+  /*background-color: #ffffff; */
   border-radius: 13px;
   transition-property: background-color;
   transition-duration: .5s;
@@ -48,7 +48,8 @@ button:hover {
   /*box-shadow: inset 0 -3px #ffffff;*/
 }
 #workspaces button.active {
-    color: #000000; /* Bright white text */
+    color: #000000; 
+    color: @flamingo;
     border-bottom: 1px solid #ffffff; /* White bottom border */
 }
 #workspaces button.urgent {
@@ -71,7 +72,6 @@ button:hover {
 }
 
 #pulseaudio {
-  color: @maroon;
   color: #c4c7cc;
 }
 
@@ -92,6 +92,7 @@ button:hover {
 #clock {
   color: @flamingo;
   color: #84868a;
+  color: #c4c7cc;
 }
 
 #cpu{
@@ -101,19 +102,20 @@ button:hover {
 
 #memory{
   color: @flamingo;
-  color: #84868a;
+  color: #c4c7cc;
 }
 
 
 #window {
   color: @rosewater;
-  color: #84868a;
+  color: #c4c7cc;
 }
 
 
 .modules-right,
 .modules-center {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
+  background-color: rgba(0, 0, 0, 0); 
 }
 
 .modules-right {
