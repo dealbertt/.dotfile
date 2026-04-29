@@ -1,4 +1,4 @@
-#vim.opt.guicursor = ""
+vim.opt.guicursor = ""
 
 vim.o.relativenumber = true
 vim.o.number = true
@@ -27,5 +27,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "110"
 vim.g.mapleader = " "
