@@ -1,19 +1,15 @@
 return{
     'williamboman/mason.nvim',
     dependencies = { "williamboman/mason-lspconfig.nvim",
+    version = "1.*",
     "neovim/nvim-lspconfig",
 },
     config = function()
-
-
-
         require('mason').setup()
         require('mason-lspconfig').setup({
             ensure_installed = { 'rust_analyzer','clangd','lua_ls','zls'},
-            automatic_installation = true,
             handlers = {
                 function(server_name)
-
                     local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
                     require('lspconfig')[server_name].setup({
                         capabilities = lsp_capabilities,

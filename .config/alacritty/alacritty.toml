@@ -4,13 +4,17 @@ background = "0x000000"
 foreground = "0xD3D3D3"
 
 [font]
-size = 12
+size = 24 
 
 [font.normal]
-family = "ZedMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
-[terminal]
+[cursor.style]
+blinking = "Always"
+
+[cursor]
+blink_interval = 500
 
 [terminal.shell]
 program = "/usr/bin/zsh"
