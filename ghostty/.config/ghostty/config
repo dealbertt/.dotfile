@@ -1,0 +1,9 @@
+i# Style
+background-opacity = 0.6
+shell-integration-features = no-cursor
+cursor-style = block
+font-size = 20
+font-feature = -liga
+
+# Performance
+#
