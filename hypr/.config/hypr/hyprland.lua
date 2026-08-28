@@ -23,7 +23,7 @@ hl.monitor({
 })
 
 hl.monitor({ output = "DP-2", mode = "1920x1080@144", position = "0x0", scale = 1 })
-hl.monitor({ output = "HDMI-A-1", mode = "1920x1080", position = "1920x0", scale = 1 })
+hl.monitor({ output = "HDMI-A-1", mode = "1920x1080", position = "1920x0", scale = 1, transform = 1 })
 
 
 ---------------------
@@ -77,7 +77,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- })
 
 -- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
--- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
+-- hl.permission("/20r/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
 -- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 
 
@@ -89,12 +89,12 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 5,
+        gaps_out = 15,
 
         border_size = 1,
 
         col = {
-            active_border = "rgba(ffffffff)",
+            active_border = "rgba(33ccffee)",
             inactive_border = "rgba(595959aa)",
         },
 
@@ -108,7 +108,7 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
+        rounding       = 0,
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
@@ -123,9 +123,9 @@ hl.config({
         },
 
         blur = {
-            enabled   = true,
-            size      = 3,
-            passes    = 1,
+            enabled   = false,
+            size      = 2,
+            passes    = 2,
             vibrancy  = 0.1696,
         },
     },
@@ -199,6 +199,7 @@ hl.animation({
 hl.config({
     dwindle = {
         preserve_split = true, -- You probably want this
+        force_split = 2,
     },
 })
 

@@ -7,13 +7,13 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/window"
+        "calendar",
+        "clock"
     ],
     "modules-right": [
+        "network",
         "pulseaudio",
         "memory",
-        "clock"
-
     ],
     "hyprland/window": {
         "format": "|{}|",
@@ -30,8 +30,8 @@
         "sort-by-number": true
     },
     "clock": {
+        "format": "{:%A  %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%H:%M}",
         "interval": 1
     },
     "cpu": {
@@ -60,14 +60,14 @@
     },
     "network": {
         "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{cidr} ",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": " ⚠ ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "{icon} ",
+        "format": "{icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "",
@@ -78,7 +78,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
     },

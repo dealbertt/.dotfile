@@ -1,13 +1,13 @@
 @import "macchiato.css";
 * {
   font-family: "JetBrainsMono Nerd Font", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0); 
+  min-height: 60px;
+  background-color: rgba(4, 16, 36, 255); 
   /*background-color: #ffffff; */
-  border-radius: 13px;
   transition-property: background-color;
   transition-duration: .5s;
   color: #000000;
@@ -162,4 +162,5 @@ label:focus {
 /* Apply margin to all modules */
 #workspaces, #clock, #network, #battery, #pulseaudio, #cpu, #memory {
     margin: 2px 10px;  /* Adjust as needed */
+    padding: 4px 10px;
 }

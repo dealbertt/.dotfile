@@ -3,7 +3,7 @@ background = "0x000000"
 foreground = "0xD3D3D3"
 
 [font]
-size = 20 
+size = 13 
 
 [cursor.style]
 blinking = "Always"
