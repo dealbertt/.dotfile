@@ -45,10 +45,12 @@ local browser     = "google-chrome"
 
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
- hl.on("hyprland.start", function () 
+hl.on("hyprland.start", function () 
 --   hl.exec_cmd(terminal)
 --   hl.exec_cmd("nm-applet")
-   hl.exec_cmd("waybar & hyprpaper")
+   
+hl.exec_cmd("hyprctl keyword workspace 1,monitor:DP-2,default:true")
+hl.exec_cmd("waybar & hyprpaper")
  end)
 
 
@@ -293,6 +295,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
+hl.bind("ALT + X", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy"))
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
@@ -390,4 +393,11 @@ hl.window_rule({
     },
 
     opacity = "0.95 0.75",
+})
+hl.window_rule({
+    match = {
+        title = "ZxEmul",
+    },
+
+    monitor = "DP-2",
 })
