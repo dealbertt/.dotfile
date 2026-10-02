@@ -394,10 +394,4 @@ hl.window_rule({
 
     opacity = "0.95 0.75",
 })
-hl.window_rule({
-    match = {
-        title = "ZxEmul",
-    },
 
-    monitor = "DP-2",
-})
